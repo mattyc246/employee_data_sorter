@@ -1,6 +1,6 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 
-const EmployeeDisplay = () => {
+const EmployeeDisplay: FunctionComponent = () => {
   return (
     <h1>
       Employee Display

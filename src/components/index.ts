@@ -1,3 +1,4 @@
 import EmployeeDisplay from "./EmployeeDisplay"
+import Loader from "./Loader"
 
-export {EmployeeDisplay}
+export {EmployeeDisplay, Loader}
