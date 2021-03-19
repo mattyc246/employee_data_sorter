@@ -12,7 +12,7 @@ const EmployeeDisplay: FunctionComponent = () => {
   if(fetchingEmployees){
     return (
       <div className="h-100 w-100 d-flex align-items-center justify-content-center">
-        <Loader color="#ffcccc" size={75}/>
+        <Loader color="#ffcccc" size={75} />
       </div>
     )
   }
