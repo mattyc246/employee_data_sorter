@@ -26,6 +26,9 @@ export const useEmployeeContext = (): EmployeeContextData => {
         setFetchingEmployees(false)
       }, 1500)
     })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   return {
