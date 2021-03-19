@@ -9,13 +9,13 @@ export interface EmployeeContextData {
 
 export const employeeContextDefaultVal: EmployeeContextData = {
   employees: [],
-  fetchingEmployees: false,
+  fetchingEmployees: true,
   fetchEmployees: () => null
 }
 
 export const useEmployeeContext = (): EmployeeContextData => {
   const [employees, setEmployees] = useState<Employee[]>([])
-  const [fetchingEmployees, setFetchingEmployees] = useState<boolean>(false)
+  const [fetchingEmployees, setFetchingEmployees] = useState<boolean>(true)
 
   const fetchEmployees = () => {}
 
