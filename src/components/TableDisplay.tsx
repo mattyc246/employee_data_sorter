@@ -65,13 +65,13 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
   const getDisplayIcon = (column: string) => {
     return filter.column === column
             ? (filter.sort === 'desc'
-              ? <FontAwesomeIcon icon={faCaretDown} />
-              : <FontAwesomeIcon icon={faCaretUp} />)
+              ? <FontAwesomeIcon className="d-block mx-auto" icon={faCaretDown} />
+              : <FontAwesomeIcon className="d-block mx-auto" icon={faCaretUp} />)
             : ''
   }
 
   return (
-    <div className="card rounded">
+    <div className="card shadow rounded">
       <div className="card-body">
         <table className="table">
           <thead>

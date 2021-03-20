@@ -29,9 +29,9 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
   }, [employees])
 
   return (
-    <div className="card my-2 h-100 rounded">
+    <div className="card my-2 shadow rounded">
       <div className="card-body">
-        <div className="row">
+        <div className="row h-50 align-items-center">
           <div className="col-12 col-md-6">
             <h5>Highest Earning Employee:</h5>
           </div>
@@ -42,8 +42,9 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row h-50 align-items-center">
           <div className="col-12 col-md-6">
+            {/* <hr className="d-block my-3" /> */}
             <h5>Most Recent Employee:</h5>
           </div>
           <div className="col-12 col-md-6">
