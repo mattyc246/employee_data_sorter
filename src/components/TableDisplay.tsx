@@ -1,3 +1,5 @@
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import moment from 'moment'
 import React, { FunctionComponent, useMemo, useState } from 'react'
 import { Employee } from '../interfaces/Employee'
@@ -25,15 +27,23 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
           return filter.sort === 'desc' ? -res : res
         })
         break;
+
       case "salary":
         employeesCopy.sort((a,b) => {
           const res = a.salary - b.salary
           return filter.sort === 'desc' ? -res : res
         })
         break;
+
       case "name":
-        filter.sort === 'desc' ? employeesCopy.sort().reverse() : employeesCopy.sort()
+        employeesCopy.sort((a,b) => {
+          const textA = a.fullname.toUpperCase();
+          const textB = b.fullname.toUpperCase();
+          const res = (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+          return filter.sort === 'desc' ? -res : res;
+        })
         break;
+
       default:
         employeesCopy.sort((a,b) => {
           return new Date(a.dateJoined).getTime() - new Date(b.dateJoined).getTime()
@@ -52,6 +62,14 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
     setFilter(newFilter)
   }
 
+  const getDisplayIcon = (column: string) => {
+    return filter.column === column
+            ? (filter.sort === 'desc'
+              ? <FontAwesomeIcon icon={faCaretDown} />
+              : <FontAwesomeIcon icon={faCaretUp} />)
+            : ''
+  }
+
   return (
     <div className="card rounded">
       <div className="card-body">
@@ -59,13 +77,19 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
           <thead>
             <tr>
               <th>
-                <button className="table__sort__button">Employee Name</button>
+                <button className="table__sort__button" onClick={() => handleSort('name')}>
+                  Employee Name { getDisplayIcon('name') }
+                </button>
               </th>
               <th>
-                <button className="table__sort__button">Date Joined</button>
+                <button className="table__sort__button" onClick={() => handleSort('dateJoined')}>
+                  Date Joined { getDisplayIcon('dateJoined') }
+                </button>
               </th>
               <th>
-                <button className="table__sort__button">Salary (MYR)</button>
+                <button className="table__sort__button" onClick={() => handleSort('salary')}>
+                  Salary (MYR) { getDisplayIcon('salary') }
+                </button>
               </th>
             </tr>
           </thead>
