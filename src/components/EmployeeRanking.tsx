@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
+import moment from "moment"
 import { Employee } from '../interfaces/Employee'
 
 export interface EmployeeRankingProps {
@@ -28,18 +29,31 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
   }, [employees])
 
   return (
-    <div className="card rounded">
+    <div className="card my-2 h-100 rounded">
       <div className="card-body">
-        <p>
-          {
-            highestEarner ? highestEarner.firstname : "-"
-          }
-        </p>
-        <p>
-          {
-            mostRecent ? mostRecent.firstname : "-"
-          }
-        </p>
+        <div className="row">
+          <div className="col-12 col-md-6">
+            <h5>Highest Earning Employee:</h5>
+          </div>
+          <div className="col-12 col-md-6">
+            <div className="d-flex justify-content-between align-items-center">
+              <p>{highestEarner ? highestEarner.fullname : "-"}</p>
+              <p>MYR{highestEarner ? highestEarner.salary.toFixed(2) : "-"}</p>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 col-md-6">
+            <h5>Most Recent Employee:</h5>
+          </div>
+          <div className="col-12 col-md-6">
+            <div className="d-flex justify-content-between align-items-center">
+              <p>{mostRecent ? mostRecent.fullname : "-"}</p>
+              <p>{mostRecent ? moment(mostRecent.dateJoined).format("Do MMMM YYYY") : '-'}</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   )

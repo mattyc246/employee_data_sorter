@@ -9,7 +9,7 @@ const EmployeeDisplay: FunctionComponent = () => {
 
   useEffect(() => {
     fetchEmployees()
-    
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -19,10 +19,10 @@ const EmployeeDisplay: FunctionComponent = () => {
         fetchingEmployees ? <Loader color="#ffcccc" size={75} /> : (
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-6 col-lg-4">
+              <div className="col-12 col-md-4">
                 <UserCount employees={employees} />
               </div>
-              <div className="col-12 col-sm-6 col-lg-8">
+              <div className="col-12 col-md-8">
                 <EmployeeRanking employees={employees} />
               </div>
               <div className="col-12"></div>

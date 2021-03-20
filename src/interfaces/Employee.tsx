@@ -3,6 +3,7 @@ export interface Employee {
   employeeId: string;
   firstname: string;
   lastname: string;
+  fullname: string;
   dateJoined: string;
   salary: number;
 }
