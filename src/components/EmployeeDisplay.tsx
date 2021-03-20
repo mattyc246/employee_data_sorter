@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useContext, useEffect } from "react"
 import { EmployeeContext } from "../context/employeeContext"
+import EmployeeRanking from "./EmployeeRanking"
 import Loader from "./Loader"
 import UserCount from "./UserCount"
 
@@ -8,7 +9,9 @@ const EmployeeDisplay: FunctionComponent = () => {
 
   useEffect(() => {
     fetchEmployees()
-  })
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="h-100 w-100 d-flex align-items-center justify-content-center">
@@ -19,7 +22,9 @@ const EmployeeDisplay: FunctionComponent = () => {
               <div className="col-12 col-sm-6 col-lg-4">
                 <UserCount employees={employees} />
               </div>
-              <div className="col-12 col-sm-6 col-lg-8"></div>
+              <div className="col-12 col-sm-6 col-lg-8">
+                <EmployeeRanking employees={employees} />
+              </div>
               <div className="col-12"></div>
             </div>
           </div>
