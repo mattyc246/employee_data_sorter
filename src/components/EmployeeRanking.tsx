@@ -29,7 +29,7 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
   }, [employees])
 
   return (
-    <div className="card my-2 shadow rounded">
+    <div className="card my-2 shadow rounded-xl">
       <div className="card-body">
         <div className="row h-50 mb-3 align-items-center">
           <div className="col-12 col-md-6">
