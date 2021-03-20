@@ -67,7 +67,7 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
             ? (filter.sort === 'desc'
               ? <FontAwesomeIcon className="d-block mx-auto" icon={faCaretDown} />
               : <FontAwesomeIcon className="d-block mx-auto" icon={faCaretUp} />)
-            : ''
+            : <span className="d-block mx-auto">-</span>
   }
 
   return (
