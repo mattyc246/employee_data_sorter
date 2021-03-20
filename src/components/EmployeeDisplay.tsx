@@ -9,16 +9,14 @@ const EmployeeDisplay: FunctionComponent = () => {
     fetchEmployees()
   })
 
-  if(fetchingEmployees){
-    return (
-      <div className="h-100 w-100 d-flex align-items-center justify-content-center">
-        <Loader color="#ffcccc" size={75} />
-      </div>
-    )
-  }
-
   return (
-    <h1>Employee Display</h1>
+    <div className="h-100 w-100 d-flex align-items-center justify-content-center">
+      {
+        fetchingEmployees ? <Loader color="#ffcccc" size={75} /> : (
+          <h1>Employee Display</h1>
+        )
+      }
+    </div>
   )
 }
 
