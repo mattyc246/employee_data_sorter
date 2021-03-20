@@ -71,23 +71,23 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
   }
 
   return (
-    <div className="card shadow rounded">
+    <div className="card shadow rounded-xl">
       <div className="card-body">
         <table className="table table-hover">
           <thead>
             <tr>
               <th>
-                <button className="table__sort__button" onClick={() => handleSort('name')}>
+                <button className="table-sort-button" onClick={() => handleSort('name')}>
                   Employee Name { getDisplayIcon('name') }
                 </button>
               </th>
               <th>
-                <button className="table__sort__button" onClick={() => handleSort('dateJoined')}>
+                <button className="table-sort-button" onClick={() => handleSort('dateJoined')}>
                   Date Joined { getDisplayIcon('dateJoined') }
                 </button>
               </th>
               <th>
-                <button className="table__sort__button" onClick={() => handleSort('salary')}>
+                <button className="table-sort-button" onClick={() => handleSort('salary')}>
                   Salary (MYR) { getDisplayIcon('salary') }
                 </button>
               </th>

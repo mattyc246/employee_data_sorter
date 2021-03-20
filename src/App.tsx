@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div id="app">
       <EmployeeContext.Provider value={employeeContextValue}>
-        <h1 className="mx-auto text-center d-block my-3">Employee Information</h1>
+        <h1 className="mx-auto text-center text-light d-block my-3">Employee Information</h1>
         <EmployeeDisplay />
       </EmployeeContext.Provider>
     </div>

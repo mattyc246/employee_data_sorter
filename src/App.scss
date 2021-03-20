@@ -1,14 +1,29 @@
 #app {
   width: 100vw;
   min-height: 100vh;
-  background-color: rgb(212, 236, 245);
+  background-color: #262626;
   padding: 2rem 7.5vw;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.table__sort__button {
+.rounded-xl {
+  border-radius: 15px;
+}
+
+.bg-light-green {
+  background-color: #aeeb8e;
+}
+
+.table-sort-button {
   background-color: transparent;
   outline: none;
   border: 0;
+}
+
+thead tr {
+  background-color: #2626262c;
 }
 
 .badge {
@@ -17,7 +32,7 @@
   }
 }
 
-.fa__icon {
+.fa-icon {
   font-size: 34px;
 
   :hover {

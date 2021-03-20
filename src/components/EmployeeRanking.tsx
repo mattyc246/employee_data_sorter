@@ -29,7 +29,7 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
   }, [employees])
 
   return (
-    <div className="card my-2 shadow rounded">
+    <div className="card my-2 shadow rounded-xl">
       <div className="card-body">
         <div className="row h-50 mb-3 align-items-center">
           <div className="col-12 col-md-6">
@@ -38,7 +38,7 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
           <div className="col-12 col-md-6">
             <div className="d-flex flex-wrap badge badge-success justify-content-between align-items-center p-3">
               <p>{highestEarner ? highestEarner.fullname : "-"}</p>
-              <p>MYR{highestEarner ? highestEarner.salary.toFixed(2) : "-"}</p>
+              <p>MYR {highestEarner ? highestEarner.salary.toFixed(2) : "-"}</p>
             </div>
           </div>
         </div>
