@@ -31,12 +31,12 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
   return (
     <div className="card my-2 shadow rounded">
       <div className="card-body">
-        <div className="row h-50 align-items-center">
+        <div className="row h-50 mb-3 align-items-center">
           <div className="col-12 col-md-6">
             <h5>Highest Earning Employee:</h5>
           </div>
           <div className="col-12 col-md-6">
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex flex-wrap badge badge-success justify-content-between align-items-center p-3">
               <p>{highestEarner ? highestEarner.fullname : "-"}</p>
               <p>MYR{highestEarner ? highestEarner.salary.toFixed(2) : "-"}</p>
             </div>
@@ -47,7 +47,7 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
             <h5>Most Recent Employee:</h5>
           </div>
           <div className="col-12 col-md-6">
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex flex-wrap badge badge-success justify-content-between align-items-center p-3">
               <p>{mostRecent ? mostRecent.fullname : "-"}</p>
               <p>{mostRecent ? moment(mostRecent.dateJoined).format("Do MMMM YYYY") : '-'}</p>
             </div>
