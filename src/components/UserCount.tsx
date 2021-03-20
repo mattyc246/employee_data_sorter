@@ -9,7 +9,7 @@ export interface UserCountProps {
 
 const UserCount: FunctionComponent<UserCountProps> = ({ employees }: UserCountProps) => {
   return (
-    <div className="h-100 my-2 card rounded">
+    <div className="my-4 card rounded">
       <div className="card-body d-flex justify-content-around align-items-center px-3">
         <FontAwesomeIcon className="fa__icon" icon={faUser} />
         <h2 className="m-0">{employees.length}</h2>

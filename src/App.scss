@@ -1,8 +1,14 @@
 #app {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgb(212, 236, 245);
   padding: 2rem 7.5vw;
+}
+
+.table__sort__button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
 }
 
 .fa__icon {
