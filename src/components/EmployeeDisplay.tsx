@@ -2,6 +2,7 @@ import React, { FunctionComponent, useContext, useEffect } from "react"
 import { EmployeeContext } from "../context/employeeContext"
 import EmployeeRanking from "./EmployeeRanking"
 import Loader from "./Loader"
+import TableDisplay from "./TableDisplay"
 import UserCount from "./UserCount"
 
 const EmployeeDisplay: FunctionComponent = () => {
@@ -25,7 +26,11 @@ const EmployeeDisplay: FunctionComponent = () => {
               <div className="col-12 col-md-8">
                 <EmployeeRanking employees={employees} />
               </div>
-              <div className="col-12"></div>
+            </div>
+            <div className="row my-4">
+              <div className="col-12">
+                <TableDisplay employees={employees} />
+              </div>
             </div>
           </div>
         )
