@@ -44,7 +44,6 @@ const EmployeeRanking: FunctionComponent<EmployeeRankingProps> = ({ employees }:
         </div>
         <div className="row h-50 align-items-center">
           <div className="col-12 col-md-6">
-            {/* <hr className="d-block my-3" /> */}
             <h5>Most Recent Employee:</h5>
           </div>
           <div className="col-12 col-md-6">
