@@ -73,7 +73,7 @@ const TableDisplay: FunctionComponent<TableProps> = ({employees}: TableProps) =>
   return (
     <div className="card shadow rounded">
       <div className="card-body">
-        <table className="table">
+        <table className="table table-hover">
           <thead>
             <tr>
               <th>
