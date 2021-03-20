@@ -4,3 +4,11 @@
   background-color: rgb(212, 236, 245);
   padding: 2rem 7.5vw;
 }
+
+.fa__icon {
+  font-size: 34px;
+
+  :hover {
+    opacity: 0.75;
+  }
+}
