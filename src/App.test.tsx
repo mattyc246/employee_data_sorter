@@ -10,7 +10,7 @@ it('renders without crashing', () => {
 
 it('renders the main title on the page', () => {
   const wrapper = shallow(<App />)
-  const title = <h1 className="mx-auto d-block my-3">Employee Information</h1>
+  const title = <h1 className="mx-auto text-center text-light d-block my-3">Employee Information</h1>
 
   expect(wrapper.contains(title)).toEqual(true)
 })
